@@ -1,0 +1,9 @@
+from itertools import permutations
+Numbers= [9, 8, 7, 6, 5, 4, 3, 2 ,1]
+perm = permutations(Numbers)
+
+with open('output.txt', 'w') as f:
+for i, p in enumerate(perm):
+if i >=900000:
+break
+f.write(f'+51{"".join(map(str, p))}\n')
